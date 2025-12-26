@@ -1,0 +1,40 @@
+{
+  "title": "Generatore Globale di Numeri della Lotteria",
+  "selectCountry": "Seleziona paese e gioco",
+  "selectGenerator": "Seleziona tipo di generatore",
+  "generatorTypes": {
+    "lottery": "Macchina della Lotteria",
+    "roulette": "Ruota della Roulette",
+    "slot": "Slot Machine"
+  },
+  "buttons": {
+    "generate": "Genera",
+    "spin": "Gira",
+    "stop": "Ferma",
+    "reset": "Reimposta",
+    "share": "Condividi",
+    "close": "Chiudi"
+  },
+  "result": {
+    "title": "I Tuoi Numeri Fortunati",
+    "mainNumbers": "Numeri Principali",
+    "bonusNumbers": "Numeri Bonus"
+  },
+  "countries": {
+    "US": "Stati Uniti",
+    "EU": "Europa",
+    "UK": "Regno Unito",
+    "DE": "Germania",
+    "IT": "Italia",
+    "ES": "Spagna",
+    "FR": "Francia",
+    "CA": "Canada",
+    "BR": "Brasile",
+    "AU": "Australia",
+    "JP": "Giappone",
+    "VIKING": "Paesi Nordici",
+    "KR": "Corea del Sud",
+    "ZA": "Sudafrica",
+    "NZ": "Nuova Zelanda"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Global Lotteri Nummergenerator",
+  "selectCountry": "Välj land och spel",
+  "selectGenerator": "Välj generatortyp",
+  "generatorTypes": {
+    "lottery": "Lotteri Maskin",
+    "roulette": "Rouletthjul",
+    "slot": "Spelautomat"
+  },
+  "buttons": {
+    "generate": "Generera",
+    "spin": "Snurra",
+    "stop": "Stoppa",
+    "reset": "Återställ",
+    "share": "Dela",
+    "close": "Stäng"
+  },
+  "result": {
+    "title": "Dina Lyckotal",
+    "mainNumbers": "Huvudnummer",
+    "bonusNumbers": "Bonusnummer"
+  },
+  "countries": {
+    "US": "USA",
+    "EU": "Europa",
+    "UK": "Storbritannien",
+    "DE": "Tyskland",
+    "IT": "Italien",
+    "ES": "Spanien",
+    "FR": "Frankrike",
+    "CA": "Kanada",
+    "BR": "Brasilien",
+    "AU": "Australien",
+    "JP": "Japan",
+    "VIKING": "Nordiska länderna",
+    "KR": "Sydkorea",
+    "ZA": "Sydafrika",
+    "NZ": "Nya Zeeland"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "グローバル宝くじ番号生成器",
+  "selectCountry": "国とゲームを選択",
+  "selectGenerator": "生成器タイプを選択",
+  "generatorTypes": {
+    "lottery": "宝くじ抽選機",
+    "roulette": "ルーレット抽選機",
+    "slot": "スロットマシン抽選機"
+  },
+  "buttons": {
+    "generate": "生成",
+    "spin": "回転",
+    "stop": "停止",
+    "reset": "リセット",
+    "share": "シェア",
+    "close": "閉じる"
+  },
+  "result": {
+    "title": "あなたのラッキーナンバー",
+    "mainNumbers": "メイン番号",
+    "bonusNumbers": "ボーナス番号"
+  },
+  "countries": {
+    "US": "アメリカ",
+    "EU": "ヨーロッパ",
+    "UK": "イギリス",
+    "DE": "ドイツ",
+    "IT": "イタリア",
+    "ES": "スペイン",
+    "FR": "フランス",
+    "CA": "カナダ",
+    "BR": "ブラジル",
+    "AU": "オーストラリア",
+    "JP": "日本",
+    "VIKING": "北欧",
+    "KR": "韓国",
+    "ZA": "南アフリカ",
+    "NZ": "ニュージーランド"
+  }
+}

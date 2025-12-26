@@ -1,0 +1,41 @@
+{
+  "title": "Global Lottery Number Generator",
+  "selectCountry": "Select Country & Game",
+  "selectGenerator": "Select Generator Type",
+  "generatorTypes": {
+    "lottery": "Lottery Machine",
+    "roulette": "Roulette Wheel",
+    "slot": "Slot Machine"
+  },
+  "buttons": {
+    "generate": "Generate",
+    "spin": "Spin",
+    "stop": "Stop",
+    "reset": "Reset",
+    "share": "Share",
+    "close": "Close"
+  },
+  "result": {
+    "title": "Your Lucky Numbers",
+    "mainNumbers": "Main Numbers",
+    "bonusNumbers": "Bonus Numbers",
+    "complete": "Complete!"
+  },
+  "countries": {
+    "US": "United States",
+    "EU": "Europe",
+    "UK": "United Kingdom",
+    "DE": "Germany",
+    "IT": "Italy",
+    "ES": "Spain",
+    "FR": "France",
+    "CA": "Canada",
+    "BR": "Brazil",
+    "AU": "Australia",
+    "JP": "Japan",
+    "VIKING": "Nordic Countries",
+    "KR": "South Korea",
+    "ZA": "South Africa",
+    "NZ": "New Zealand"
+  }
+}

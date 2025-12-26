@@ -1,0 +1,297 @@
+.roulette-machine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.roulette-container-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+}
+
+.roulette-pointer {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: bounce 1s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.roulette-wheel-glass {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.roulette-wheel-glass.spinning {
+  animation: rouletteGlow 0.5s ease-in-out infinite alternate;
+  box-shadow:
+    0 0 40px rgba(100, 200, 255, 0.6),
+    0 0 60px rgba(100, 200, 255, 0.4),
+    0 8px 32px 0 rgba(31, 38, 135, 0.5),
+    inset 0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+@keyframes rouletteGlow {
+  from {
+    box-shadow:
+      0 0 40px rgba(100, 200, 255, 0.6),
+      0 0 60px rgba(100, 200, 255, 0.4),
+      0 8px 32px 0 rgba(31, 38, 135, 0.5),
+      inset 0 0 30px rgba(255, 255, 255, 0.15);
+  }
+  to {
+    box-shadow:
+      0 0 60px rgba(150, 220, 255, 0.8),
+      0 0 80px rgba(150, 220, 255, 0.6),
+      0 8px 40px 0 rgba(31, 38, 135, 0.6),
+      inset 0 0 40px rgba(255, 255, 255, 0.25);
+  }
+}
+
+.roulette-number {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: white;
+  text-shadow:
+    0 0 15px rgba(0, 0, 0, 1),
+    0 0 8px rgba(0, 0, 0, 1),
+    2px 2px 6px rgba(0, 0, 0, 0.8),
+    -1px -1px 2px rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.5),
+    inset 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+}
+
+.roulette-divider {
+  position: absolute;
+  width: 3px;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  top: 0;
+  left: 50%;
+  margin-left: -1.5px;
+  transform-origin: 50% 100%;
+}
+
+.roulette-center-glass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(31, 38, 135, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.spin-button-glass {
+  position: relative;
+  background: radial-gradient(circle at 50% 40%, #4caf50, #43a047, #2e7d32);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 900;
+  padding: 16px 55px;
+  border: none;
+  border-radius: 55px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 7px 0 #1b5e20,
+    0 9px 13px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease;
+  transform: translateY(0);
+}
+
+.spin-button-glass::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 10%;
+  width: 80%;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), transparent);
+  border-radius: 50%;
+  filter: blur(4px);
+}
+
+.spin-button-glass:hover:not(:disabled) {
+  background: radial-gradient(circle at 50% 40%, #66bb6a, #4caf50, #388e3c);
+  box-shadow:
+    0 7px 0 #1b5e20,
+    0 9px 18px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(76, 175, 80, 0.6),
+    inset 0 2px 4px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.spin-button-glass:active:not(:disabled) {
+  transform: translateY(5px);
+  box-shadow:
+    0 2px 0 #1b5e20,
+    0 3px 8px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.spin-button-glass:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(0.3);
+}
+
+.reset-button-glass {
+  position: relative;
+  background: radial-gradient(circle at 50% 40%, #f44336, #e53935, #c62828);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 14px 35px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 6px 0 #b71c1c,
+    0 8px 12px rgba(0, 0, 0, 0.4),
+    inset 0 2px 3px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease;
+  transform: translateY(0);
+}
+
+.reset-button-glass::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 15%;
+  width: 70%;
+  height: 35%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
+  border-radius: 50%;
+  filter: blur(3px);
+}
+
+.reset-button-glass:hover {
+  background: radial-gradient(circle at 50% 40%, #ff5252, #f44336, #d32f2f);
+  box-shadow:
+    0 6px 0 #b71c1c,
+    0 8px 15px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(244, 67, 54, 0.5),
+    inset 0 2px 3px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button-glass:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 #b71c1c,
+    0 3px 6px rgba(0, 0, 0, 0.4),
+    inset 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .roulette-wheel-glass {
+    width: 280px;
+    height: 280px;
+  }
+
+  .roulette-number {
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+    margin: -24px 0 0 -24px;
+  }
+
+  .roulette-center-glass {
+    width: 90px;
+    height: 90px;
+    font-size: 0.8rem;
+  }
+
+  .spin-button-glass {
+    font-size: 1.1rem;
+    padding: 12px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .roulette-wheel-glass {
+    width: 240px;
+    height: 240px;
+  }
+
+  .roulette-number {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+    margin: -21px 0 0 -21px;
+  }
+
+  .roulette-center-glass {
+    width: 75px;
+    height: 75px;
+    font-size: 0.7rem;
+  }
+
+  .spin-button-glass {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+
+  .roulette-pointer {
+    font-size: 2rem;
+  }
+}

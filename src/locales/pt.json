@@ -1,0 +1,40 @@
+{
+  "title": "Gerador Global de Números de Loteria",
+  "selectCountry": "Selecionar país e jogo",
+  "selectGenerator": "Selecionar tipo de gerador",
+  "generatorTypes": {
+    "lottery": "Máquina de Loteria",
+    "roulette": "Roda de Roleta",
+    "slot": "Máquina Caça-níqueis"
+  },
+  "buttons": {
+    "generate": "Gerar",
+    "spin": "Girar",
+    "stop": "Parar",
+    "reset": "Reiniciar",
+    "share": "Compartilhar",
+    "close": "Fechar"
+  },
+  "result": {
+    "title": "Seus Números da Sorte",
+    "mainNumbers": "Números Principais",
+    "bonusNumbers": "Números Bônus"
+  },
+  "countries": {
+    "US": "Estados Unidos",
+    "EU": "Europa",
+    "UK": "Reino Unido",
+    "DE": "Alemanha",
+    "IT": "Itália",
+    "ES": "Espanha",
+    "FR": "França",
+    "CA": "Canadá",
+    "BR": "Brasil",
+    "AU": "Austrália",
+    "JP": "Japão",
+    "VIKING": "Países Nórdicos",
+    "KR": "Coreia do Sul",
+    "ZA": "África do Sul",
+    "NZ": "Nova Zelândia"
+  }
+}

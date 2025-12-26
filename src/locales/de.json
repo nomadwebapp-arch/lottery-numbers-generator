@@ -1,0 +1,40 @@
+{
+  "title": "Globaler Lotto-Nummern-Generator",
+  "selectCountry": "Land und Spiel auswählen",
+  "selectGenerator": "Generator-Typ auswählen",
+  "generatorTypes": {
+    "lottery": "Lotto-Maschine",
+    "roulette": "Roulette-Rad",
+    "slot": "Spielautomat"
+  },
+  "buttons": {
+    "generate": "Generieren",
+    "spin": "Drehen",
+    "stop": "Stoppen",
+    "reset": "Zurücksetzen",
+    "share": "Teilen",
+    "close": "Schließen"
+  },
+  "result": {
+    "title": "Ihre Glückszahlen",
+    "mainNumbers": "Hauptzahlen",
+    "bonusNumbers": "Bonuszahlen"
+  },
+  "countries": {
+    "US": "Vereinigte Staaten",
+    "EU": "Europa",
+    "UK": "Vereinigtes Königreich",
+    "DE": "Deutschland",
+    "IT": "Italien",
+    "ES": "Spanien",
+    "FR": "Frankreich",
+    "CA": "Kanada",
+    "BR": "Brasilien",
+    "AU": "Australien",
+    "JP": "Japan",
+    "VIKING": "Nordische Länder",
+    "KR": "Südkorea",
+    "ZA": "Südafrika",
+    "NZ": "Neuseeland"
+  }
+}

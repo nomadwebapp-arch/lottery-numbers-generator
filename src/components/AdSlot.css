@@ -1,0 +1,92 @@
+.ad-slot-container {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.ad-slot-container.banner {
+  margin: 25px 0;
+}
+
+.ad-slot-container.rectangle {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.ad-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* 실제 AdSense가 로드되면 플레이스홀더 숨김 */
+.ad-slot-container:has(.adsbygoogle[data-ad-status="filled"]) .ad-placeholder {
+  display: none;
+}
+
+/* 개발용 플레이스홀더 */
+.ad-placeholder {
+  width: 100%;
+  min-height: 90px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.ad-placeholder-content {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+}
+
+.ad-placeholder-content span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ad-placeholder-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ad-placeholder-content small {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* 배너형 광고 (상단/하단) */
+.ad-slot-container.banner .ad-placeholder {
+  max-width: 728px;
+  min-height: 90px;
+}
+
+/* 사각형 광고 (중간) */
+.ad-slot-container.rectangle .ad-placeholder {
+  max-width: 336px;
+  min-height: 280px;
+}
+
+/* 모바일 배너 */
+@media (max-width: 768px) {
+  .ad-slot-container.banner .ad-placeholder {
+    max-width: 320px;
+    min-height: 50px;
+  }
+
+  .ad-slot-container.rectangle .ad-placeholder {
+    max-width: 300px;
+    min-height: 250px;
+  }
+}

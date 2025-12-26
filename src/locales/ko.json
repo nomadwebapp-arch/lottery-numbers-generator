@@ -1,0 +1,41 @@
+{
+  "title": "글로벌 로또 번호 생성기",
+  "selectCountry": "국가 및 게임 선택",
+  "selectGenerator": "생성기 유형 선택",
+  "generatorTypes": {
+    "lottery": "로또 추첨기",
+    "roulette": "룰렛 추첨기",
+    "slot": "슬롯머신 추첨기"
+  },
+  "buttons": {
+    "generate": "생성",
+    "spin": "회전",
+    "stop": "정지",
+    "reset": "초기화",
+    "share": "공유",
+    "close": "닫기"
+  },
+  "result": {
+    "title": "행운의 번호",
+    "mainNumbers": "메인 번호",
+    "bonusNumbers": "보너스 번호",
+    "complete": "완료!"
+  },
+  "countries": {
+    "US": "미국",
+    "EU": "유럽",
+    "UK": "영국",
+    "DE": "독일",
+    "IT": "이탈리아",
+    "ES": "스페인",
+    "FR": "프랑스",
+    "CA": "캐나다",
+    "BR": "브라질",
+    "AU": "호주",
+    "JP": "일본",
+    "VIKING": "북유럽",
+    "KR": "대한민국",
+    "ZA": "남아프리카",
+    "NZ": "뉴질랜드"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Wereldwijde Loterij Nummer Generator",
+  "selectCountry": "Selecteer land en spel",
+  "selectGenerator": "Selecteer generator type",
+  "generatorTypes": {
+    "lottery": "Loterij Machine",
+    "roulette": "Roulette Wiel",
+    "slot": "Gokautomaat"
+  },
+  "buttons": {
+    "generate": "Genereer",
+    "spin": "Draaien",
+    "stop": "Stop",
+    "reset": "Reset",
+    "share": "Delen",
+    "close": "Sluiten"
+  },
+  "result": {
+    "title": "Jouw Geluksnummers",
+    "mainNumbers": "Hoofdnummers",
+    "bonusNumbers": "Bonusnummers"
+  },
+  "countries": {
+    "US": "Verenigde Staten",
+    "EU": "Europa",
+    "UK": "Verenigd Koninkrijk",
+    "DE": "Duitsland",
+    "IT": "Italië",
+    "ES": "Spanje",
+    "FR": "Frankrijk",
+    "CA": "Canada",
+    "BR": "Brazilië",
+    "AU": "Australië",
+    "JP": "Japan",
+    "VIKING": "Noordse Landen",
+    "KR": "Zuid-Korea",
+    "ZA": "Zuid-Afrika",
+    "NZ": "Nieuw-Zeeland"
+  }
+}

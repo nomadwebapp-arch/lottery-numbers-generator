@@ -1,0 +1,40 @@
+{
+  "title": "Générateur de Numéros de Loterie Mondial",
+  "selectCountry": "Sélectionner le pays et le jeu",
+  "selectGenerator": "Sélectionner le type de générateur",
+  "generatorTypes": {
+    "lottery": "Machine à Loterie",
+    "roulette": "Roue de la Roulette",
+    "slot": "Machine à Sous"
+  },
+  "buttons": {
+    "generate": "Générer",
+    "spin": "Tourner",
+    "stop": "Arrêter",
+    "reset": "Réinitialiser",
+    "share": "Partager",
+    "close": "Fermer"
+  },
+  "result": {
+    "title": "Vos Numéros Chanceux",
+    "mainNumbers": "Numéros Principaux",
+    "bonusNumbers": "Numéros Bonus"
+  },
+  "countries": {
+    "US": "États-Unis",
+    "EU": "Europe",
+    "UK": "Royaume-Uni",
+    "DE": "Allemagne",
+    "IT": "Italie",
+    "ES": "Espagne",
+    "FR": "France",
+    "CA": "Canada",
+    "BR": "Brésil",
+    "AU": "Australie",
+    "JP": "Japon",
+    "VIKING": "Pays Nordiques",
+    "KR": "Corée du Sud",
+    "ZA": "Afrique du Sud",
+    "NZ": "Nouvelle-Zélande"
+  }
+}
