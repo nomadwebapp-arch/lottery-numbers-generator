@@ -364,7 +364,12 @@
 /* Responsive */
 @media (max-width: 768px) {
   .machine-dome-glass {
-    height: 220px;
+    height: 280px;
+  }
+
+  .sphere-container {
+    width: 260px;
+    height: 260px;
   }
 
   .floating-ball {
@@ -377,15 +382,39 @@
     font-size: 1.1rem;
     padding: 12px 30px;
   }
+
+  @keyframes extractBall {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+    30% {
+      transform: translate(0, 0) scale(1.5);
+      opacity: 1;
+    }
+    60% {
+      transform: translate(120px, -80px) scale(1.2) rotate(360deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(240px, -80px) scale(1) rotate(720deg);
+      opacity: 0;
+    }
+  }
 }
 
 @media (max-width: 480px) {
   .machine-body-glass {
-    padding: 20px;
+    padding: 15px;
   }
 
   .machine-dome-glass {
-    height: 200px;
+    height: 240px;
+  }
+
+  .sphere-container {
+    width: 220px;
+    height: 220px;
   }
 
   .floating-ball {
@@ -397,5 +426,25 @@
   .generate-button-glass {
     font-size: 1rem;
     padding: 10px 25px;
+    letter-spacing: 2px;
+  }
+
+  @keyframes extractBall {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+    30% {
+      transform: translate(0, 0) scale(1.4);
+      opacity: 1;
+    }
+    60% {
+      transform: translate(80px, -60px) scale(1.1) rotate(360deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(160px, -60px) scale(0.9) rotate(720deg);
+      opacity: 0;
+    }
   }
 }
