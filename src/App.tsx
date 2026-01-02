@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { lotteryGames } from './data/lotteryGames';
 import { LotteryGame, GeneratorType, GeneratedNumbers } from './types/lottery';
-import { generateLotteryNumbers } from './utils/numberGenerator';
 import LotteryMachine from './components/LotteryMachine';
 import RouletteMachine from './components/RouletteMachine';
 import SlotMachine from './components/SlotMachine';

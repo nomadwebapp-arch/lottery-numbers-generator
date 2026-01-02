@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LotteryGame } from '../types/lottery';
-import { generateUniqueNumbers, getBallColor } from '../utils/numberGenerator';
+import { generateUniqueNumbers } from '../utils/numberGenerator';
 import './SlotMachine.css';
 
 interface SlotMachineProps {
@@ -23,7 +23,7 @@ const SlotMachine = ({ game, onNumberUpdate, onReset }: SlotMachineProps) => {
   const [finalNumbers, setFinalNumbers] = useState<number[]>([]);
   const [hasStarted, setHasStarted] = useState(false);
   const [stoppedCount, setStoppedCount] = useState(0);
-  const numberChangeIntervals = useRef<NodeJS.Timeout[]>([]);
+  const numberChangeIntervals = useRef<number[]>([]);
 
   const mainRequired = game.mainNumbers.count;
   const bonusRequired = game.bonusNumbers?.count || 0;

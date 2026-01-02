@@ -170,7 +170,7 @@ const RouletteMachine = ({ game, onNumberUpdate, onReset }: RouletteMachineProps
           }}
         >
           {/* Dividing lines */}
-          {rouletteNumbers.map((num, index) => (
+          {rouletteNumbers.map((_, index) => (
             <div
               key={`divider-${index}`}
               className="roulette-divider"
