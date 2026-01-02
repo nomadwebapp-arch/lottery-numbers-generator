@@ -533,4 +533,35 @@
     font-size: 1.1rem;
     padding: 11px 35px;
   }
+
+  /* Make lever very small on mobile */
+  .slot-lever {
+    width: 20px;
+    height: 70px;
+    right: 8px;
+  }
+
+  .lever-handle {
+    width: 8px;
+    height: 55px;
+  }
+
+  .lever-ball {
+    width: 20px;
+    height: 20px;
+  }
+
+  .lever-ball::before {
+    top: 4px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+  }
+
+  .lever-ball::after {
+    bottom: 3px;
+    right: 4px;
+    width: 4px;
+    height: 4px;
+  }
 }
