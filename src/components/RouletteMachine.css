@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 35px;
   width: 100%;
 }
 
@@ -151,6 +151,7 @@
     inset 0 -2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.1s ease;
   transform: translateY(0);
+  margin-top: 10px;
 }
 
 .spin-button-glass::before {
@@ -243,6 +244,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .roulette-container-glass {
+    gap: 30px;
+  }
+
   .roulette-wheel-glass {
     width: 280px;
     height: 280px;
@@ -268,6 +273,10 @@
 }
 
 @media (max-width: 480px) {
+  .roulette-container-glass {
+    gap: 25px;
+  }
+
   .roulette-wheel-glass {
     width: 240px;
     height: 240px;
