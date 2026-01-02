@@ -31,7 +31,7 @@ const AdSlot = ({ slot, format = 'auto', responsive = true, className = '' }: Ad
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" // 여기에 본인의 AdSense ID 입력
+        data-ad-client="ca-pub-1819240594545238"
         data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive={responsive ? 'true' : 'false'}
