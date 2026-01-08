@@ -7,8 +7,6 @@ import RouletteMachine from './components/RouletteMachine';
 import SlotMachine from './components/SlotMachine';
 import LiveResult from './components/LiveResult';
 import ResultModal from './components/ResultModal';
-import AdNativeBanner from './components/AdNativeBanner';
-import AdBottomBanner from './components/AdBottomBanner';
 import './App.css';
 
 function App() {
@@ -229,15 +227,9 @@ function App() {
               totalRequired={totalRequired}
               isComplete={isComplete}
             />
-
-            {/* 중간 광고 (네이티브 배너) */}
-            <AdNativeBanner />
           </div>
         </div>
       </main>
-
-      {/* 하단 고정 배너 */}
-      <AdBottomBanner />
 
       {showModal && generatedNumbers && (
         <ResultModal
