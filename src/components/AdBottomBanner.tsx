@@ -46,7 +46,7 @@ const AdBottomBanner = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        backgroundColor: 'transparent',
         zIndex: 1000,
         padding: '0',
       }}
