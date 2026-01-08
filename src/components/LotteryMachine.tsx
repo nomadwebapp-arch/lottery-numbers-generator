@@ -8,9 +8,10 @@ interface LotteryMachineProps {
   game: LotteryGame;
   onNumberUpdate: (numbers: number[], bonusNumbers?: number[]) => void;
   onReset: () => void;
+  trackClick?: () => void; // 팝언더 광고 클릭 추적
 }
 
-const LotteryMachine = ({ game, onNumberUpdate, onReset }: LotteryMachineProps) => {
+const LotteryMachine = ({ game, onNumberUpdate, onReset, trackClick }: LotteryMachineProps) => {
   const { t } = useTranslation();
   const [selectedMainNumbers, setSelectedMainNumbers] = useState<number[]>([]);
   const [selectedBonusNumbers, setSelectedBonusNumbers] = useState<number[]>([]);
@@ -55,6 +56,9 @@ const LotteryMachine = ({ game, onNumberUpdate, onReset }: LotteryMachineProps) 
   const handleGenerate = () => {
     const currentTotal = selectedMainNumbers.length + selectedBonusNumbers.length;
     if (isGenerating || currentTotal >= totalRequired) return;
+
+    // 팝언더 광고 클릭 추적
+    trackClick?.();
 
     setIsGenerating(true);
 

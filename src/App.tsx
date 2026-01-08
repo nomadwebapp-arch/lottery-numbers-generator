@@ -7,11 +7,14 @@ import RouletteMachine from './components/RouletteMachine';
 import SlotMachine from './components/SlotMachine';
 import LiveResult from './components/LiveResult';
 import ResultModal from './components/ResultModal';
-import AdSlot from './components/AdSlot';
+import AdNativeBanner from './components/AdNativeBanner';
+import AdBottomBanner from './components/AdBottomBanner';
+import { usePopAds } from './hooks/usePopAds';
 import './App.css';
 
 function App() {
   const { t, i18n } = useTranslation();
+  const { trackClick } = usePopAds(); // 팝언더 광고 훅 (5회마다 팝업)
   const [selectedGame, setSelectedGame] = useState<LotteryGame>(lotteryGames[17]); // Default: Korea
   const [generatorType, setGeneratorType] = useState<GeneratorType>('lottery');
   const [liveNumbers, setLiveNumbers] = useState<number[]>([]);
@@ -193,9 +196,6 @@ function App() {
           </div>
         </div>
 
-        {/* 상단 광고 */}
-        <AdSlot slot="1234567890" format="horizontal" className="banner" />
-
         <div className="content-layout">
           <div className="generator-area">
             {generatorType === 'lottery' && (
@@ -204,6 +204,7 @@ function App() {
                 game={selectedGame}
                 onNumberUpdate={handleNumberUpdate}
                 onReset={handleReset}
+                trackClick={trackClick}
               />
             )}
             {generatorType === 'roulette' && (
@@ -212,6 +213,7 @@ function App() {
                 game={selectedGame}
                 onNumberUpdate={handleNumberUpdate}
                 onReset={handleReset}
+                trackClick={trackClick}
               />
             )}
             {generatorType === 'slot' && (
@@ -220,6 +222,7 @@ function App() {
                 game={selectedGame}
                 onNumberUpdate={handleNumberUpdate}
                 onReset={handleReset}
+                trackClick={trackClick}
               />
             )}
           </div>
@@ -232,14 +235,14 @@ function App() {
               isComplete={isComplete}
             />
 
-            {/* 중간 광고 (결과 영역 하단) */}
-            <AdSlot slot="0987654321" format="rectangle" className="rectangle" />
+            {/* 중간 광고 (네이티브 배너) */}
+            <AdNativeBanner />
           </div>
         </div>
-
-        {/* 하단 광고 */}
-        <AdSlot slot="1122334455" format="horizontal" className="banner" />
       </main>
+
+      {/* 하단 고정 배너 */}
+      <AdBottomBanner />
 
       {showModal && generatedNumbers && (
         <ResultModal
