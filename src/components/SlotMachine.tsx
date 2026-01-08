@@ -8,10 +8,9 @@ interface SlotMachineProps {
   game: LotteryGame;
   onNumberUpdate: (numbers: number[], bonusNumbers?: number[]) => void;
   onReset: () => void;
-  trackClick?: () => void; // 팝언더 광고 클릭 추적
 }
 
-const SlotMachine = ({ game, onNumberUpdate, onReset, trackClick }: SlotMachineProps) => {
+const SlotMachine = ({ game, onNumberUpdate, onReset }: SlotMachineProps) => {
   const { t } = useTranslation();
   const [selectedMainNumbers, setSelectedMainNumbers] = useState<number[]>([]);
   const [selectedBonusNumbers, setSelectedBonusNumbers] = useState<number[]>([]);
@@ -85,9 +84,6 @@ const SlotMachine = ({ game, onNumberUpdate, onReset, trackClick }: SlotMachineP
 
   const handleStart = () => {
     if (hasStarted) return;
-
-    // 팝언더 광고 클릭 추적
-    trackClick?.();
 
     // Lever animation
     setLeverPulled(true);

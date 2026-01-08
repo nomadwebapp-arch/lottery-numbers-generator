@@ -9,12 +9,10 @@ import LiveResult from './components/LiveResult';
 import ResultModal from './components/ResultModal';
 import AdNativeBanner from './components/AdNativeBanner';
 import AdBottomBanner from './components/AdBottomBanner';
-import { usePopAds } from './hooks/usePopAds';
 import './App.css';
 
 function App() {
   const { t, i18n } = useTranslation();
-  const { trackClick } = usePopAds(); // 팝언더 광고 훅 (5회마다 팝업)
   const [selectedGame, setSelectedGame] = useState<LotteryGame>(lotteryGames[17]); // Default: Korea
   const [generatorType, setGeneratorType] = useState<GeneratorType>('lottery');
   const [liveNumbers, setLiveNumbers] = useState<number[]>([]);
@@ -204,7 +202,6 @@ function App() {
                 game={selectedGame}
                 onNumberUpdate={handleNumberUpdate}
                 onReset={handleReset}
-                trackClick={trackClick}
               />
             )}
             {generatorType === 'roulette' && (
@@ -213,7 +210,6 @@ function App() {
                 game={selectedGame}
                 onNumberUpdate={handleNumberUpdate}
                 onReset={handleReset}
-                trackClick={trackClick}
               />
             )}
             {generatorType === 'slot' && (
@@ -222,7 +218,6 @@ function App() {
                 game={selectedGame}
                 onNumberUpdate={handleNumberUpdate}
                 onReset={handleReset}
-                trackClick={trackClick}
               />
             )}
           </div>
