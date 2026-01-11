@@ -41,13 +41,13 @@ export const generateUniqueNumbers = (
 
 /**
  * Get ball color based on number range
- * 0-9: yellow, 10-19: red, 20-29: blue, 30-39: green, 40-49: purple, 50+: orange
+ * Modern color palette with softer, more elegant tones
  */
 export const getBallColor = (num: number): string => {
-  if (num < 10) return '#FFD700'; // yellow (includes 0 for Germany bonus)
-  if (num < 20) return '#FF4444'; // red
-  if (num < 30) return '#4444FF'; // blue
-  if (num < 40) return '#44FF44'; // green
-  if (num < 50) return '#AA44FF'; // purple
-  return '#FF8844'; // orange
+  if (num < 10) return '#F59E0B'; // amber
+  if (num < 20) return '#EF4444'; // rose red
+  if (num < 30) return '#3B82F6'; // sky blue
+  if (num < 40) return '#10B981'; // emerald
+  if (num < 50) return '#8B5CF6'; // violet
+  return '#F97316'; // orange
 };

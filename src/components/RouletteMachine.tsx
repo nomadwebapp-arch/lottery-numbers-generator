@@ -61,31 +61,36 @@ const RouletteMachine = ({ game, onNumberUpdate, onReset }: RouletteMachineProps
     // Determine if we're selecting main or bonus
     const isSelectingBonus = selectedMainNumbers.length >= mainRequired;
 
-    // Get appropriate pool
-    let availableNumbers: number[];
+    // Generate number from FULL range, not just displayed numbers
+    let selectedNum: number;
     if (isSelectingBonus && game.bonusNumbers) {
-      // Select from bonus pool
+      // Select from full bonus range
       const bonusMin = game.bonusNumbers.min;
       const bonusMax = game.bonusNumbers.max;
-      availableNumbers = rouletteNumbers.filter(
-        (num) => num >= bonusMin && num <= bonusMax && !selectedBonusNumbers.includes(num)
-      );
+      const availableNumbers: number[] = [];
+      for (let i = bonusMin; i <= bonusMax; i++) {
+        if (!selectedBonusNumbers.includes(i)) {
+          availableNumbers.push(i);
+        }
+      }
+      selectedNum = availableNumbers[Math.floor(Math.random() * availableNumbers.length)];
     } else {
-      // Select from main pool
+      // Select from full main range
       const mainMin = game.mainNumbers.min;
       const mainMax = game.mainNumbers.max;
-      availableNumbers = rouletteNumbers.filter(
-        (num) => num >= mainMin && num <= mainMax && !selectedMainNumbers.includes(num)
-      );
+      const availableNumbers: number[] = [];
+      for (let i = mainMin; i <= mainMax; i++) {
+        if (!selectedMainNumbers.includes(i)) {
+          availableNumbers.push(i);
+        }
+      }
+      selectedNum = availableNumbers[Math.floor(Math.random() * availableNumbers.length)];
     }
 
-    const selectedIndex = Math.floor(Math.random() * availableNumbers.length);
-    const selectedNum = availableNumbers[selectedIndex];
+    // Random target position on wheel (just for visual effect)
+    const targetIndex = Math.floor(Math.random() * rouletteNumbers.length);
 
-    // Find the index of this number in rouletteNumbers array
-    const targetIndex = rouletteNumbers.indexOf(selectedNum);
-
-    // Calculate rotation needed to land on this number
+    // Calculate rotation needed to land on this position
     const segmentAngle = 360 / rouletteNumbers.length;
     const targetAngle = targetIndex * segmentAngle;
 
@@ -108,6 +113,11 @@ const RouletteMachine = ({ game, onNumberUpdate, onReset }: RouletteMachineProps
     setRotation(targetRotation);
 
     setTimeout(() => {
+      // Update the wheel to show the selected number at the landing position
+      const newRouletteNumbers = [...rouletteNumbers];
+      newRouletteNumbers[targetIndex] = selectedNum;
+      setRouletteNumbers(newRouletteNumbers);
+
       if (isSelectingBonus) {
         setSelectedBonusNumbers([...selectedBonusNumbers, selectedNum]);
       } else {
