@@ -34,22 +34,13 @@
   perspective: 1000px;
 }
 
-/* 3D Sphere Container */
+/* 3D Sphere Container - 구는 고정, 공만 움직임 */
 .sphere-container {
   width: 320px;
   height: 320px;
   position: relative;
   transform-style: preserve-3d;
-  animation: rotateSphere 20s linear infinite;
-}
-
-@keyframes rotateSphere {
-  from {
-    transform: rotateY(0deg) rotateX(15deg);
-  }
-  to {
-    transform: rotateY(360deg) rotateX(15deg);
-  }
+  transform: rotateX(15deg);
 }
 
 /* Transparent Sphere Shell */
